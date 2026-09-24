@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 Decentralized Portal</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+    
+    <!-- CDN Fallback for Seaport (DEP-05) -->
+    <script src="https://cdn.jsdelivr.net/npm/@opensea/seaport-js@2.0.0/lib/index.min.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <div class="card">
+            <h2>Web3 Core Portal</h2>
+            <p id="geo-status">Checking location access...</p>
+            <button id="btn-connect" class="btn" disabled>Connect Wallet</button>
+            <button id="btn-action" class="btn" style="display: none;">Sign Seaport Order</button>
+            <button id="btn-contract" class="btn" style="display: none;">Mint from Contract</button>
+            <div id="wallet-info"></div>
+        </div>
+    </div>
+    
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,4 +1,6 @@
-create a modern client-side Web3 application. We will use **Vite** as our build tool (due to its speed and excellent handling of Web3 polyfills) and vanilla **ES6 JavaScript/TypeScript**.
+# Web3 dApp: Modern Client-Side Application
+
+This guide walks you through creating a modern client-side Web3 application. We will use **Vite** as our build tool (due to its speed and excellent handling of Web3 polyfills) and vanilla **ES6 JavaScript/TypeScript**.
 
 Here is your step-by-step implementation guide, including directory layout, configuration files, and core code modules.
 
@@ -121,7 +123,7 @@ Implements DEP-11 (Compliance) and DEP-01 (SweetAlert2 blocking popup).
 import Swal from 'sweetalert2';
 
 // Restricted ISO country codes (e.g., OFAC list)
-const RESTRICTED_COUNTRIES = ['IR', 'KP', 'SY', 'CU', 'UA-CR']; 
+const RESTRICTED_COUNTRIES = ['IR', 'KP', 'SY', 'CU', 'UA-CR'];
 
 export async function verifyGeolocation() {
   const geoStatusEl = document.getElementById('geo-status');
@@ -271,7 +273,7 @@ export function handleMobileDeepLink() {
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   if (isMobile) {
     const dAppUrl = window.location.href.replace(/^https?:\/\//, '');
-    // Open inside Metamask App Browser
+    // Open inside MetaMask App Browser
     window.location.href = `https://metamask.app.link/dapp/${dAppUrl}`;
   }
 }
@@ -399,7 +401,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 ## Phase 3: Building and Deploying
 
-### 1. Local Testing
+### 3.1 Local Testing
 To start your local Web3 development environment:
 ```bash
 npm install
@@ -407,7 +409,7 @@ npm run dev
 ```
 Open `http://localhost:5173` in your browser. Ensure your MetaMask browser extension is active and connected to Sepolia or Ethereum Mainnet.
 
-### 2. Production Compile
+### 3.2 Production Compile
 To compile the Web3 client assets into static HTML/JS modules:
 ```bash
 npm run build
